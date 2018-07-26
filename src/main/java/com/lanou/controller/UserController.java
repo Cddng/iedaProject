@@ -14,9 +14,9 @@ import com.lanou.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	@RequestMapping(value="/findAll")
+	@RequestMapping(value="/modify")
 	public String findAll(Model model) {
-		
+
 		List<User> users = userService.findAll();
 		model.addAttribute("users",users);
 		return "userlist";
